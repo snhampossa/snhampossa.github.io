@@ -1,0 +1,334 @@
+/* ----------------------------------------------- */
+/* GENERAL  */
+/* ----------------------------------------------- */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body{
+  width: 100%;
+}
+
+/* ----------------------------------------------- */
+/* NAVIGATION-BAR A.K.A MENU  */
+/* ----------------------------------------------- */
+
+.wrapHead {
+  min-height: 7vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 1px 10px #999;
+}
+
+#brand {
+  flex-grow: 2;
+  padding: 0.9rem;
+}
+
+#brand img {
+  width: 12rem;
+  cursor: pointer;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  margin: 0 1rem;
+  margin-right: 0px;
+  height: 100%;
+}
+
+li {
+  padding: 1.2rem;
+}
+
+li a {
+  color: green;
+  text-decoration: none;
+}
+
+li:hover {
+  background-color: #5dc46bd8;
+}
+
+/*hamburguer icon*/
+.topnav {
+  overflow: hidden;
+}
+
+.icon {
+  display: none;
+}
+
+/* ----------------------------------------------- */
+/* STICKY SOCIAL MEDIA BAR  */
+/* ----------------------------------------------- */
+.icon_bar{
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon_bar a{
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon_bar a:hover{
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.linkedin{
+  background: #007bb5;
+  color: white;
+}
+
+.instagram{
+  background: #3B5998;
+  color: white;
+}
+
+/* ----------------------------------------------- */
+/* INICIO SECTION  */
+/* ----------------------------------------------- */
+
+.bgimg-1,
+.bgimg-2 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("photos/kaitlyn2.jpg");
+  min-height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  color: #fff;
+  font-size: 65px;
+  letter-spacing: 10px;
+}
+
+/* ----------------------------------------------- */
+/* SOBRE SECTION  */
+/* ----------------------------------------------- */
+
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: green;
+}
+
+h2{
+ font: 20px "Lato", sans-serif;
+}
+
+h1{
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 30px "Lato", sans-serif;
+  color: green;
+}
+
+#quemSomos{
+  width: 60%;
+  margin: auto;
+}
+
+#text, #text1, #text2, #text3, #text4, #text5{
+  display: none;
+}
+
+/* ----------------------------------------------- */
+/* SERVICOS SECTION */
+/* ----------------------------------------------- */
+
+/*servicos images*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.bgimg-2 {
+  background-image: url("photos/coding2.jpg");
+  min-height: 60%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 33.3%;
+  padding:8px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.card.img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.card img{
+  width: 50%;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ----------------------------------------------- */
+/* CONTACTOS   */
+/* ----------------------------------------------- */
+
+/**table**/
+td {
+  text-align: left;
+}
+
+/* ----------------------------------------------- */
+/* RESPONSIVENESS   */
+/* ----------------------------------------------- */
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
+
+}
+
+/* ????????? */
+@media screen and (max-width: 450px){
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.column {
+  width: 100%;
+  display: block;
+}
+
+#quemSomos{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+}
+
+/**devices with width = or less than 768px*/
+/*menu, quem somos & servicos part*/
+@media screen and (max-width: 768px) {
+  .wrapHead{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-list{
+    display: none;
+
+  }
+  .menu-list.responsive {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  /*hamburguer*/
+    .icon{
+      display: block;
+      color: green;
+      position: absolute ;
+      top: 10px;
+      right: 20px;
+    }
+
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/**devices with width = or less than 1140px*/
+/*quem somos & servicos part*/
+@media screen and (max-width: 1140px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    flex-basis: 20rem;
+    flex-grow: 1;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .caption span.border {
+    font-size: 2.7rem;
+  }
+}

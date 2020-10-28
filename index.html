@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script><!--used to add icons-->
+  </head>
+
+  <body>
+    <div class="wrapHead">
+      <div id="brand">
+        <a href="#inicio"><img src="photos/Imagotipo primário.png" alt="logo" /></a>
+      </div>
+
+      <nav class="topnav" id="myTopnav">
+        <ul class="menu-list" id="menu" >
+          <li><a href="#contactos"> Contactos </a></li>
+          <li><a href="#servicos"> Serviços </a></li>
+          <li><a href="#quemSomos"> Sobre </a></li>
+          <li><a href="#inicio"> Início </a></li>
+
+        </ul>
+      </nav>
+
+      <div class="icon">
+        <a href="javascript:void(0);" class="icon" onclick="hamburguer()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <div id="inicio" class="bgimg-1"><!-- título-->
+      <div class="caption">
+        <span class="border"> QTsolutions </span>
+      </div>
+    </div>
+
+    <!-- quem somos-->
+    <div id="quemSomos"
+      style="text-align: center; padding: 50px 90px; text-align: center">
+      <h3 style="text-align: center">Quem somos</h3>
+      <p>
+        QT Solutions é uma empresa Moçambicana cujo principal objectivo
+        é de fornecer serviços de consultoria nas áreas de Tecnologia
+        de Informação de forma à satisfazer as necessidades de seus clientes
+        de forma eficaz, inovadora e de qualidade.
+      </p>
+
+      <br>
+      <h3 style="text-align: center">Missão</h3>
+      <p>
+        Ser uma empresa reconhecida à nível Nacional e Internacional
+        como a melhor opção para os seus clientes, colaboradores,
+        comunidade e fornecedores, garantindo qualidade, eficácia e
+        eficiência dos serviços e produtos.
+      </p>
+
+      <br>
+      <h3 style="text-align: center">Visão</h3>
+      <p>
+        Ser referência na prestação de serviços e consolidar nossa
+        inquestionável qualidade dos produtos e serviços em uma posição
+        de líder no mercado.
+      </p>
+
+      <br>
+      <h3 style="text-align: center">Valores</h3>
+      <p>
+        Inovação, profissionalismo, compromisso com clientes, parceiros e
+        colaboradores.
+      </p>
+    </div>
+
+    <!-- serviços -->
+    <div id="servicos" class="bgimg-2">
+      <div
+        style="
+          color: #ffffff;
+          background-color: transparent;
+          text-align: center;
+          padding: 50px 80px;
+          text-align: center;
+        "
+      >
+        <h1 style="text-align: center; color: #ffffff">Serviços</h1>
+        <hr>
+        <br>
+
+        <div class="row">
+          <div class="column"><!--redes-->
+            <div class="card">
+              <a onclick="toggle()">
+                <img
+                src="photos/redes.jpg"
+                alt="Redes"
+                />
+              </a>
+
+              <div class="container">
+                <h2 style="text-align: center; color: #ffffff"> Redes </h2>
+                <div id="text">
+                  <p>Provemos todo tipo de serviços ligados à redes de computadores
+                    desde à sua Projecção, Instalação e Manutenção à sua Configuração.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column"><!--web-->
+            <div class="card">
+              <a onclick="toggle1()">
+                <img
+                src="photos/web.jpg"
+                alt="Web design e Marketing digital"
+                />
+              </a>
+              <div class="container">
+                <h2 style="text-align: center; color: #ffffff">Web design e Marketing digital</h2>
+                <div id="text1">
+                  <p>Desenhamos, desenvolvemos e mantemos qualquer tipo de website
+                    desde o mais básico ao mais complexo e ajudamos-lhe à atrair mais
+                    clientes e a aumentar as compras na sua empresa à partir da internet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column"><!--software-->
+            <div class="card">
+              <a onclick="toggle5()">
+                <img
+                src="photos/software.jpg"
+                alt="Serviços de software"/>
+              </a>
+              <div class="container">
+                <h2 style="text-align: center; color: #ffffff">Serviços de Software</h2>
+                  <div id="text5">
+                    <p>
+                      Instalamos, actualizamos, reinstalamos e formatamos Softwares,
+                      Sistemas Operativos, Anti-vírus, Firewalls, Malwares e
+                      Controlo Parental.
+
+                    </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column"><!--suporte técnico-->
+            <div class="card">
+              <a onclick="toggle3()">
+                <img src="photos/suporte.jpg"
+                      alt="Suporte técnico"/>
+              </a>
+              <div class="container">
+                <h2 style="text-align: center; color: #ffffff"> Suporte técnico</h2>
+                <div id="text3">
+                  <p>
+                    Provemos todo tipo trabalho que envolva Hardware, desde a Instalação,
+                    Optimização, Manutenção, Diagnóstico, Reparo e Montagem à limpeza
+                    interna e externa, assistência ao domicílio, e Treinamento em Microsoft
+                    Office.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column"><!--cctv-->
+            <div class="card">
+              <a onclick="toggle4()">
+                <img
+                src="photos/cctv.jpg"
+                alt="Segurança electrónica(CCTV e Vedação)"/>
+              </a>
+
+              <div class="container">
+                <h2 style="text-align: center; color: #ffffff">
+                  Segurança Electronica (CCTV e Vedação)
+                </h2>
+                  <div id="text4">
+                    <p>
+                      Os nossos serviços de CCTV podem ser usados em interiores
+                      e exteriores, desempenhando um  papel essencial no controlo
+                      de instalações, na avaliação de riscos e na detecção de
+                      crimes em ambientes públicos e privados.
+                    </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column"><!--assiduidade-->
+            <div class="card">
+              <a onclick="toggle2()">
+                <img
+                src="photos/assiduidade.jpg"
+                alt="Controlo de acesso e assiduidade"
+                />
+              </a>
+              <div class="container">
+                <h2 style="text-align: center; color: #ffffff">Controlo de acesso e assiduidade</h2>
+                <div id="text2">
+                  <p>A gestão de controlo de acesso permite o bloqueio à entrada a
+                    visitantes não autorizados e a livre circulação de pessoas
+                    autorizadas à sua empresa, permitindo assim gerir o desempenho
+                    dos colaboradores.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contactos -->
+    <div id="contactos" class="bgimg-3" style="position: relative">
+      <div
+        style="
+          color: #ddd;
+          background-color: #282e34;
+          text-align: center;
+          padding: 30px 60px;
+          text-align: justify;">
+
+        <h2>Contactos</h2>
+        <hr>
+        <table>
+          <!-- endereço-->
+          <tr>
+            <td><i class="fas fa-map-marker-alt"></i></td>
+            <td style="font-size:20px">Endereço </td>
+          </tr>
+          <tr>
+            <td>  </td>
+            <td> Av da Malhangalene, nr 24, Maputo - Moçambique</td>
+          </tr>
+
+          <!-- telefone-->
+          <tr>
+            <td> <i class="fas fa-phone-alt"></i> </td>
+            <td style="font-size:20px"> Telefone</td>
+          </tr>
+          <tr>
+            <td>  </td>
+            <td> +258 84 0254 404 </td>
+          </tr>
+          <tr>
+            <td>  </td>
+            <td> +258 87 0254 123 </td>
+          </tr>
+          <tr>
+            <td>  </td>
+            <td> +258 82 9615 452 </td>
+          </tr>
+
+          <!-- email-->
+          <tr>
+            <td> <i class="fas fa-at"></i> </td>
+            <td style="font-size:20px"> Email</td>
+          </tr>
+          <tr>
+            <td>  </td>
+            <td><a href="mailto:#" style="color: white;"> email@gmail.com </a></td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+    <script src="app.js" charset="utf-8"></script>
+
+    <div class="icon_bar">
+      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+      <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+    </div>
+  </body>
+
+</html>
